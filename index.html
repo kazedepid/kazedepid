@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #f0f4f8;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            background: linear-gradient(135deg, #4a00e0, #8e2de2);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .banner {
+            width: 100%;
+            height: 250px;
+            background: url('https://i.ibb.co.com/Rgq6brr/download-1.jpg') no-repeat center center/cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: -75px;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #282c34;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            transition: background-color 0.3s;
+        }
+        h2 {
+            color: #61dafb;
+            margin-top: 20px;
+            border-bottom: 2px solid #61dafb;
+            padding-bottom: 5px;
+            transition: color 0.3s;
+        }
+        h2:hover {
+            color: #4a00e0;
+        }
+        .bio {
+            background: #3c3f41;
+            padding: 15px;
+            border-radius: 10px;
+            overflow: auto;
+            white-space: pre;
+            font-family: 'Courier New', monospace;
+            color: #81c784;
+            margin: 20px 0;
+            font-size: 1em;
+            position: relative;
+            padding: 20px;
+        }
+        .bio::before {
+            content: "💻";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 2em;
+        }
+        .project {
+            background: #3c3f41;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+        .project h3 {
+            color: #6a11cb;
+            margin: 0 0 10px;
+        }
+        .project p {
+            margin: 0 0 15px;
+            font-size: 0.9em;
+        }
+        .project a {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #2575fc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .project a:hover {
+            background: #6a11cb;
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+        }
+        .dark-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .dark-mode header {
+            background: linear-gradient(135deg, #4a00e0, #8e2de2);
+        }
+        .dark-mode .container {
+            background: #f4f4f4; 
+        }
+        .dark-mode h2, .dark-mode p, .dark-mode a {
+            color: #000000;
+        }
+        .dark-mode .project {
+            background-color: #e0e0e0; 
+        }
+        .dark-mode footer {
+            background: #222;
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            .project {
+                padding: 15px;
+            }
+            .project a {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Portofolio Pribadi</h1>
+    <p>Kaze Dev</p>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Mode Gelap</button>
+</header>
+
+<div class="banner"></div>
+
+<section class="container">
+    <div class="profile-section">
+        <img src="https://i.ibb.co.com/qYS0KsM/184882024.jpg" alt="Profile" class="profile-img">
+        <h2>Biodata</h2>
+        <div class="bio">
+            <code>
+                <p>const nama = "Kaze";</p>
+                <p>const profesi = "Developer abal-abal";</p>
+                <p>const keahlian = ["HTML", "CSS", "JavaScript", "React", "Python", "dll"];</p>
+                <p>const kontak = { email: "kazedepid@gmail.com", GitHub: "https://github.com/kazedepid" };</p>
+                <p>console.log(nama, profesi, keahlian, kontak);</p>
+            </code>
+        </div>
+    </div>
+
+    <h2>Proyek Up-to-Date</h2>
+    <p>Proyek Up-to-Date ini adalah proyek repositori yang ada di github yang auto mengambil repositori yang masih update</p>
+    <div id="projects"></div>
+
+    <h2>Proyek Lainnya</h2>
+    <div id="other-projects">
+        <div class="project">
+            <h3><a href="https://kazedepid.github.io/html-game-tebak-angka/" target="_blank">Proyek html-game-tebak-angka</a></h3>
+        </div>
+    </div>
+
+    <h2>Kontak</h2>
+    <p>Email: <a href="mailto:kazedepid@gmail.com">kazedepid@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/kazedepid" target="_blank">My Github</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 kazedepid. Semua hak dilindungi.</p>
+</footer>
+
+<script>
+    async function fetchProjects() {
+        const username = 'kazedepid';
+        const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated`);
+        const repos = await response.json();
+
+        const oneMonthAgo = new Date();
+        oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+
+        const recentProjects = repos.filter(repo => {
+            const updatedAt = new Date(repo.updated_at);
+            return updatedAt >= oneMonthAgo;
+        });
+
+        const projectsContainer = document.getElementById('projects');
+        recentProjects.forEach(project => {
+            const projectElement = document.createElement('div');
+            projectElement.className = 'project';
+            projectElement.innerHTML = `
+                <h3><a href="${project.html_url}" target="_blank">${project.name}</a></h3>
+                <p>${project.description || 'Deskripsi tidak tersedia.'}</p>
+                <a href="${project.html_url}" target="_blank">Lihat Proyek</a>
+            `;
+            projectsContainer.appendChild(projectElement);
+        });
+
+        if (recentProjects.length === 0) {
+            projectsContainer.innerHTML = '<p>Tidak ada proyek yang diperbarui dalam sebulan terakhir.</p>';
+        }
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        const button = document.querySelector('.theme-toggle');
+        button.textContent = document.body.classList.contains('dark-mode') ? '🌞 Mode Terang' : '🌙 Mode Gelap';
+    }
+    document.addEventListener('DOMContentLoaded', fetchProjects);
+</script>
+
+</body>
+</html>
